@@ -7,22 +7,22 @@ import { useRouter } from 'next/router';
 const list = [
   {
     icon: 'kb',
-    label: '我的知识库',
+    label: '我的知识库📚',
     link: '/kb'
   },
   {
-    icon: 'shareMarket',
-    label: 'AI助手市场',
+    icon: 'appStore',
+    label: 'AI应用市场💠',
     link: '/model/share'
   },
   {
     icon: 'promotion',
-    label: '邀请好友',
+    label: '邀请好友🧑‍🤝‍🧑',
     link: '/promotion'
   },
   {
     icon: 'develop',
-    label: '开发',
+    label: '开发💻',
     link: '/openapi'
   }
 ];

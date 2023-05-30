@@ -16,6 +16,10 @@ const UserSchema = new Schema({
     get: (val: string) => hashPassword(val),
     select: false
   },
+  createTime: {
+    type: Date,
+    default: () => new Date()
+  },
   avatar: {
     type: String,
     default: '/icon/human.png'
@@ -23,7 +27,7 @@ const UserSchema = new Schema({
   balance: {
     // 平台余额，不可提现
     type: Number,
-    default: 0.5 * PRICE_SCALE
+    default: 1 * PRICE_SCALE
   },
   inviterId: {
     // 谁邀请注册的
@@ -34,16 +38,18 @@ const UserSchema = new Schema({
     rate: {
       // 返现比例
       type: Number,
-      default: 15
+      default: 10
     }
   },
   openaiKey: {
     type: String,
     default: ''
   },
-  createTime: {
-    type: Date,
-    default: () => new Date()
+  limit: {
+    exportKbTime: {
+      // Every half hour
+      type: Date
+    }
   }
 });
 

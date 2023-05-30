@@ -1,8 +1,9 @@
 import React from 'react';
-import { Card, Box, Image, Flex } from '@chakra-ui/react';
+import { Card, Box, Flex } from '@chakra-ui/react';
 import { useMarkdown } from '@/hooks/useMarkdown';
 import Markdown from '@/components/Markdown';
 import { LOGO_ICON } from '@/constants/chat';
+import Avatar from '@/components/Avatar';
 
 const Empty = ({
   showChatProblem,
@@ -16,7 +17,7 @@ const Empty = ({
   };
 }) => {
   const { data: chatProblem } = useMarkdown({ url: '/chatProblem.md' });
-  const { data: versionIntro } = useMarkdown({ url: '/versionIntro.md' });
+
 
   return (
     <Box
@@ -31,13 +32,7 @@ const Empty = ({
       {name && (
         <Card p={4} mb={10}>
           <Flex mb={2} alignItems={'center'} justifyContent={'center'}>
-            <Image
-              src={avatar || LOGO_ICON}
-              w={'32px'}
-              maxH={'40px'}
-              objectFit={'contain'}
-              alt={''}
-            />
+            <Avatar src={avatar} w={'32px'} h={'32px'} />
             <Box ml={3} fontSize={'3xl'} fontWeight={'bold'}>
               {name}
             </Box>
@@ -49,9 +44,6 @@ const Empty = ({
       {showChatProblem && (
         <>
           {/* version intro */}
-          <Card p={4} mb={10}>
-            <Markdown source={versionIntro} />
-          </Card>
           <Card p={4}>
             <Markdown source={chatProblem} />
           </Card>
