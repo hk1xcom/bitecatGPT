@@ -23,7 +23,7 @@ const WxConcat = ({ onClose }: { onClose: () => void }) => {
         <ModalBody textAlign={'center'}>
           <Image
             style={{ margin: 'auto' }}
-            src={'/imgs/wxxiaoerlang.png'}
+            src={'/imgs/vxewm.png'}
             width={'200px'}
             height={'200px'}
             alt=""
@@ -31,7 +31,7 @@ const WxConcat = ({ onClose }: { onClose: () => void }) => {
           <Box mt={2}>
             微信号:
             <Box as={'span'} userSelect={'all'}>
-              xiaodongbiu
+            kaola888i
             </Box>
           </Box>
         </ModalBody>

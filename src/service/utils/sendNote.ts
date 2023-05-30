@@ -19,19 +19,19 @@ const mailTransport = nodemailer.createTransport({
 
 const emailMap: { [key: string]: any } = {
   [UserAuthTypeEnum.register]: {
-    subject: '注册 MZ-FastGPT 账号',
-    html: (code: string) => `<div>您正在注册  MZ-FastGPT 账号，验证码为：${code}</div>`
+    subject: '欢迎使用Bit Gpt-fast AI知识库系统',
+    html: (code: string) => `<div>您正在注册 Bit Gpt-fast 账号，验证码为：${code}</div>`
   },
   [UserAuthTypeEnum.findPassword]: {
-    subject: '修改 MZ-FastGPT 密码',
-    html: (code: string) => `<div>您正在修改 MZ-FastGPT 账号密码，验证码为：${code}</div>`
+    subject: '修改 Bit Gpt-fast 密码',
+    html: (code: string) => `<div>您正在修改 Bit Gpt-fast 账号密码，验证码为：${code}</div>`
   }
 };
 
 export const sendEmailCode = (email: string, code: string, type: `${UserAuthTypeEnum}`) => {
   return new Promise((resolve, reject) => {
     const options = {
-      from: `"FastGPT" ${myEmail}`,
+      from: `"Bit Gpt-fast" ${myEmail}`,
       to: email,
       subject: emailMap[type]?.subject,
       html: emailMap[type]?.html(code)

@@ -181,7 +181,7 @@ const PhoneSliderBar = ({
       <RenderButton onClick={onOpenWx}>
         <>
           <MyIcon name="wx" fill={'white'} w={'18px'} h={'18px'} mr={4} />
-          交流群
+          微信咨询
         </>
       </RenderButton>
 

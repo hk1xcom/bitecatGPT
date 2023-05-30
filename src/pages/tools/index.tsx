@@ -24,11 +24,6 @@ const list = [
     icon: 'develop',
     label: '开发',
     link: '/openapi'
-  },
-  {
-
-    label: '支持我们"麦资网"',
-    link: 'https://www.mzc77.com/'
   }
 ];
 
