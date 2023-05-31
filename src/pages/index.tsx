@@ -164,7 +164,7 @@ const Home = () => {
         >
           Bit Gpt-fast
         </Box>
-        <Box color={'myBlue.600'} fontSize={['20px', '405px']}>
+        <Box color={'myBlue.600'} fontSize={['20px', '40px']}>
         Bit-AI
         </Box>
         <Box color={'myBlue.600'} fontSize={['30px', '50px']}>
