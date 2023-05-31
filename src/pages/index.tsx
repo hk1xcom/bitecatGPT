@@ -144,6 +144,7 @@ const Home = () => {
       alignItems={'center'}
       h={'100%'}
       overflow={'overlay'}
+      background={`url('/imgs/bj.jpg') center/cover`}
     >
       <Box id={'particles-js'} position={'absolute'} top={0} left={0} right={0} bottom={0} />
 
@@ -163,8 +164,8 @@ const Home = () => {
         >
           Bit Gpt-fast
         </Box>
-        <Box color={'myBlue.600'} fontSize={['30px', '50px']}>
-        Bit-Technology
+        <Box color={'myBlue.600'} fontSize={['20px', '405px']}>
+        Bit-AI
         </Box>
         <Box color={'myBlue.600'} fontSize={['30px', '50px']}>
         搭建自己的 AI 知识库

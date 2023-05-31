@@ -58,55 +58,6 @@ const PayRecordTable = () => {
       setPayOrders(res);
     }
   });
-
-  return (
-    <>
-      <Card mt={6} py={4}>
-        <Flex alignItems={'flex-end'} px={6} mb={1}>
-          <Box fontSize={'xl'} fontWeight={'bold'}>
-            充值记录
-          </Box>
-          <Button onClick={onOpenWx} size={'xs'} ml={4} variant={'outline'}>
-            异常问题，请联系客服
-          </Button>
-        </Flex>
-        <TableContainer px={6}>
-          <Table>
-            <Thead>
-              <Tr>
-                <Th>订单号</Th>
-                <Th>时间</Th>
-                <Th>金额</Th>
-                <Th>状态</Th>
-                <Th></Th>
-              </Tr>
-            </Thead>
-            <Tbody fontSize={'sm'}>
-              {payOrders.map((item) => (
-                <Tr key={item._id}>
-                  <Td>{item.orderId}</Td>
-                  <Td>
-                    {item.createTime ? dayjs(item.createTime).format('YYYY/MM/DD HH:mm:ss') : '-'}
-                  </Td>
-                  <Td>{formatPrice(item.price)}元</Td>
-                  <Td>{item.status}</Td>
-                  <Td>
-                    {item.status === 'NOTPAY' && (
-                      <Button onClick={() => handleRefreshPayOrder(item._id)} size={'sm'}>
-                        更新
-                      </Button>
-                    )}
-                  </Td>
-                </Tr>
-              ))}
-            </Tbody>
-          </Table>
-        </TableContainer>
-      </Card>
-      {/* wx 联系 */}
-      {isOpenWx && <WxConcat onClose={onCloseWx} />}
-    </>
-  );
 };
 
 export default PayRecordTable;

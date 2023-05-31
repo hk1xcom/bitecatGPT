@@ -30,6 +30,7 @@ const PayModal = dynamic(() => import('./components/PayModal'), {
 });
 
 const NumberSetting = () => {
+  const { isOpen: isOpenWx, onOpen: onOpenWx, onClose: onCloseWx } = useDisclosure();
   const router = useRouter();
   const { userInfo, updateUserInfo, initUserInfo, setUserInfo } = useUserStore();
   const { setLoading } = useGlobalStore();
@@ -136,8 +137,11 @@ const NumberSetting = () => {
           </Button>*/}
           </Flex>
           <Box fontSize={'xs'} color={'blackAlpha.500'}>
-           如果填写了自己的 openai 账号，将不会计费
+           此处填写openaiKey可免费使用bit-gpt
           </Box>
+          <Button onClick={onOpenWx} size={'xs'} ml={4} variant={'outline'}>
+            联系客户丨获取KEY
+          </Button>
         </Box>
         <Flex mt={6} alignItems={'center'}>
           <Box flex={'0 0 85px'}>openaiKey:</Box>
