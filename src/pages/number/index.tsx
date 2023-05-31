@@ -136,8 +136,8 @@ const NumberSetting = () => {
           </Button>*/}
           </Flex>
           <Box fontSize={'xs'} color={'blackAlpha.500'}>
-           此处填写openaiKey可免费使用bit-gpt
-          </Box>
+           此处填写 openaiKey 可免费使用bit-gpt
+          </Box> 
         </Box>
         <Flex mt={6} alignItems={'center'}>
           <Box flex={'0 0 85px'}>openaiKey:</Box>
